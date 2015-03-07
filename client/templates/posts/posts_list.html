@@ -1,0 +1,89 @@
+<template name="postsList">
+	{{#each posts}}
+		{{> postItem}}
+	{{/each}}
+</template>
+
+
+
+<template name="postComment">
+	
+	<li class="">
+		
+		 <p class="text-info"><small>
+		 
+		 {{#if commentLength}}
+		 {{cmntsLength}} Comments 
+		 {{/if}}</small></p>
+		{{#each comments}}
+		<!-- <a class="pull-left" href="/user">
+			<img src="/images/xyz.jpeg" width =" 30px" class="img-rounded" />
+		</a>
+		<span class="commentText h5"> {{by}} :</span>
+		<span class="commentText">{{message}}</span><br> -->
+		
+		<div class="media">
+			  <div class="media-left media-middle">
+			    <a href="#"><!-- /user -->
+			      <img class="media-object img-rounded" src="images/user.png" alt="..." width="40px;">
+			    </a>
+			  </div>
+			  <div class="media-body">
+			  	
+			    <span class=" h4 text-capitalize">{{by}} <span class="text-muted"></span> </span>
+			    <span >{{message}}</span> <span class="text-muted"><small> {{date}}</small></span>
+
+			    {{#if iPosted cusid}} <!-- /*for passing loign userid*/ -->
+			   		<div class="">
+                          
+                                <div class="">
+                                    <a href="#" class="remove" id="delete"><small>Delete</small></a>	
+                                   	 <!-- <a href="#" class="btn btn-xs btn-info btn-edit" id="edit"><i class="fa fa-pencil"></i> </a> -->
+
+                                </div>
+                            
+                                
+                        </div>
+			   	{{/if}}
+
+			    	
+			  </div>
+		</div>
+		{{/each}}
+			
+	</li>
+	
+	
+	<li class="">
+		<!-- <a class="pull-left" href="/user">
+			<img src="/images/sameer.jpeg" width =" 30px" class="img-rounded" />
+		</a>
+		<div class="form-group">
+			<form id="commentForm">
+			<input type="text" class="form-control" id="comment" placeholder="Write a comment">
+			</form>
+		</div> -->
+
+		<div class="media">
+		  <div class="media-left media-middle">
+		    <a href="#">
+		    	<div style="margin-top:4px;">
+		    		<img class="media-object img-rounded " src="images/user.png" alt="..." width="40px" >
+		    	</div>
+		      
+		    	
+		    </a>
+		  </div>
+		  <div class="media-body">
+		    <div class="form-group">
+			<form id="commentForm" style="margin-top:16px;">
+			<input type="text" class="form-control" id="comment" placeholder="Write a comment">
+			</form>
+		</div>
+		  </div>
+		</div>
+		
+	</li>
+
+
+</template>

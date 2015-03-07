@@ -1,0 +1,37 @@
+<template name="privateMessage">
+<div id="prvt-msg">
+
+	
+<div class="container" >
+	<br><br>
+	<div class="col-md-7">
+		<h1 style="color:#fff;">Private Chat section of Kurakani</h1>
+	</div>
+	<br><br>
+		
+		<div class="row">
+			<div class="chat_window col-md-9">
+				{{#each myHelper}}
+					<h3>{{name}}:{{message}}      <h4 style="color:red; font-style:italic;">{{date}}</h4></h3>
+				{{/each}}
+			</div>	
+		</div>
+
+		
+		{{>chat_text}}
+
+	</div>
+</div>
+
+</template>
+
+<template name="pri_chat_text">
+	<div class="row">
+		<form class="col-md-9" id="chat_form">
+		    <div class="form-group">
+		        <!-- <input type="text" class="form-control" id="textField"> -->
+		        <textarea class="form-control" rows="3" id="textArea"></textarea>
+		    </div>
+		</form>
+	</div>
+</template>

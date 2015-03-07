@@ -1,0 +1,37 @@
+<template name="signup">
+    <div class="col-lg-offset-4 col-lg-4 signup">
+        <div class="well">
+            <h4 class="text-center text-primary">
+                Signup For Kurakani
+            </h4>
+            <form class="" id="signupForm">
+                <div class="form-group">
+                    <label class="control-label" for="userName">Username</label>
+                    <input class="form-control" id="userName" type="text">
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="userEmail">Email</label>
+                    <input class="form-control" id="userEmail" type="text">
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="userPassword">Password</label>
+                    <input class="form-control"  id="userPassword" type="password">
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="userConfirmPassword">Confirm Password</label>
+                    <input class="form-control"  id="userConfirmPassword" type="password">
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-block  btn-primary"> Signup</button>
+                </div>
+            </form>
+            <div>
+                <span id="signupError"></span>
+            </div>
+            <div>
+                <span>Already A User <a class="btn-link" href="/login"> Login</a> </span>
+            </div>
+
+        </div>
+    </div>
+</template>

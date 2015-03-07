@@ -1,0 +1,190 @@
+
+.signup{
+	margin-top: 90px;
+}
+
+.login{
+	margin-top: 90px;
+}
+
+.margintop{
+	margin-top: 61px;
+}
+
+#post{
+	border-bottom:1px solid #ddd;
+}
+
+#post-list{
+	list-style: none;
+}
+
+.newsFeedTable tr td{
+    padding-right: 10px;
+}
+
+#online-users{
+    border-left: 1px solid #dddddd;
+    border-right: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+#chatrooms{
+    border-left: 1px solid #dddddd;
+    border-right: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+#online-users table{
+    margin-bottom: 0px !important;
+}
+
+#online-users a{
+    color: #555555;
+}
+
+#online-users a:hover{
+    text-decoration: none;
+}
+
+#personal-user{
+    display: block;
+}
+
+.userStatus{
+    padding-top: 5px;
+    font-size: 14px;
+    line-height: 18px;
+}
+#k-posts{
+    list-style: none;
+    padding-left: 0px !important;
+    margin-top:-10px;
+}
+
+#p-post{
+    border-bottom: 1px solid #DDDDDD;
+    margin-top:10px;
+
+}
+#userPic{
+    font-size: 16px;
+    margin-top:5px;
+
+}
+
+.dashboard-right{
+    list-style: none;
+}
+
+.dashboard-right li{
+    margin-left: -35px !important;
+    font-size: 17px;
+    line-height: 40px !important;
+}
+
+#people-you-may-know .panel-body{
+    margin: -8px !important;
+}
+
+#people-you-may-know ul li{
+    margin-bottom: 8px;
+}
+.userStatus{
+    margin-left: 60px;
+}
+
+#online-users ul li{
+    list-style: none;
+    margin-left: -22px !important;
+}
+
+#second-col-status-updates{
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+#profile-pics-col{
+    padding:0px !important;
+}
+
+#front-page-right-col{
+    padding:0px !important;
+}
+
+p.commentText{
+    margin-left: 40px;
+
+}
+
+.post-comment{
+    list-style: none;
+    margin-left:-40px !important;
+}
+
+.list-style-none{
+    list-style: none;
+    margin-left:-40px !important;
+}
+
+#comment-input{
+    margin-left: 40px;
+}
+
+/*#postList{
+    height: 80vh;
+    overflow-y: scroll;
+    overflow-x:hidden;
+}*/
+
+/*homepage*/
+#home-bg{
+width: 100%;
+height: 280px;
+position: absolute;
+top: 0px;
+left: 0px;
+right: 0px;
+background-color: #517FA4;
+background-image: url('images/noise-1.png'), -moz-linear-gradient(center top , #517FA4, #306088);
+background-position: 50% 50%;
+}
+
+#kurakani-title{
+    color:#FFF;
+    margin-right: 100px;
+
+    /*text-indent: -9999em;*/
+
+}
+/*/homepage*/
+
+
+/*jeevan sir ko code*/
+
+.chat_window{
+    height: 400px;
+    /*background: -moz-linear-gradient(left, rgba(242,246,248,1) 0%, rgba(242,246,248,1) 6%, rgba(216,225,231,1) 32%, rgba(181,198,208,1) 57%, rgba(224,239,249,1) 95%, rgba(224,239,249,1) 100%);*/
+    background: rgba(242,246,248,1);
+    background: -moz-linear-gradient(left, rgba(242,246,248,1) 0%, rgba(242,246,248,1) 6%, rgba(216,225,231,1) 32%, rgba(181,198,208,1) 57%, rgba(224,239,249,1) 95%, rgba(224,239,249,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(242,246,248,1)), color-stop(6%, rgba(242,246,248,1)), color-stop(32%, rgba(216,225,231,1)), color-stop(57%, rgba(181,198,208,1)), color-stop(95%, rgba(224,239,249,1)), color-stop(100%, rgba(224,239,249,1)));
+    background: -webkit-linear-gradient(left, rgba(242,246,248,1) 0%, rgba(242,246,248,1) 6%, rgba(216,225,231,1) 32%, rgba(181,198,208,1) 57%, rgba(224,239,249,1) 95%, rgba(224,239,249,1) 100%);
+    background: -o-linear-gradient(left, rgba(242,246,248,1) 0%, rgba(242,246,248,1) 6%, rgba(216,225,231,1) 32%, rgba(181,198,208,1) 57%, rgba(224,239,249,1) 95%, rgba(224,239,249,1) 100%);
+    background: -ms-linear-gradient(left, rgba(242,246,248,1) 0%, rgba(242,246,248,1) 6%, rgba(216,225,231,1) 32%, rgba(181,198,208,1) 57%, rgba(224,239,249,1) 95%, rgba(224,239,249,1) 100%);
+    background: linear-gradient(to right, rgba(242,246,248,1) 0%, rgba(242,246,248,1) 6%, rgba(216,225,231,1) 32%, rgba(181,198,208,1) 57%, rgba(224,239,249,1) 95%, rgba(224,239,249,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f6f8', endColorstr='#e0eff9', GradientType=1 );
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 20px;
+    overflow-y: auto; 
+}
+
+#prvt-msg{
+    background-color: #517FA4;
+    width: 100%;
+    height: 700px;
+}

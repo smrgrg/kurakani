@@ -1,0 +1,40 @@
+<template name="science">
+
+<div id="prvt-msg">
+	
+<div class="container">
+<br><br><br><br>
+	<h1 style="color:#fff;">Welcome to Science chatroom !!!</h1>
+		
+		<div class="row">
+			<div class="chat_window col-md-9">
+
+				{{#each myScienceHelper}}
+					{{#if newUser}}
+					<h3>Welcome {{name}}</h3>
+					{{else}}
+					<h3>{{name}}:{{message}}<h4 style="color:red; font-style:italic;">{{date}}</h4></h3>
+					{{/if}}
+				{{/each}}
+
+			</div>	
+		</div>
+
+		
+		{{>chat_text}}
+
+	</div>
+</div>
+
+</template>
+
+<!-- <template name="chat_text">
+	<div class="row">
+		<form class="col-md-9" id="chat_form">
+		    <div class="form-group">
+		        <input type="text" class="form-control" id="textField">
+		        <textarea class="form-control" rows="3" id="textArea"></textarea>
+		    </div>
+		</form>
+	</div>
+</template> -->

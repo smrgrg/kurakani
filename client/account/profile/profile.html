@@ -1,0 +1,93 @@
+<template name="profile">
+	
+<div class="margintop">
+	<div class="col-md-3" id="profile-pics-col">
+		<div class="panel panel-primary">
+			<div class="panel-body">
+	            <img class="img-responsive img-rounded" src="{{avatar}}" />
+	            <table id="userPic">
+	                <tr><td><strong class="h4"><b><a href="#">  {{currentUser.profile.username}}</a> </b></strong></td></tr>
+	                <tr><td><span>From Pokhara, Nepal</span></td></tr>
+	                <tr><td>Software Engineer</td></tr>
+	                <tr><td>greenfeetsoft.com</td></tr>
+	                </table>
+			</div>
+		</div>
+	</div>
+	
+
+	<div class="col-md-6" id="second-col-status-updates">
+			
+		<ul class="list-style-none">
+			<li>
+				<div class="thumbnail">
+					<img src="/images/1500x500.jpg" class="img-responsive img-rounded">
+				</div>
+		 {{#each posts}} 
+		
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<div class="media">
+				  		<a class="pull-left" href="#">
+				    	<img class="media-object img-rounded" src="{{avatar}}" width="50px" alt="...">
+				  		</a>
+				  		<div class="media-body">
+				    		<h5 class="media-heading"><a href="{{pathFor 'profile'}}">{{author}}</a><span class="text-muted">{{duration}}</span></h5>
+				    		{{#if editing}}
+				    			 <div class="form-group">
+								<form id="editForm">
+					    			<input type="text" id="editPosts" value="{{statusText}}" />
+					    			<button type="btn btn-primary sm" id="EditPost">Edit</button>
+			    			</form>
+			    			</div>
+				    		
+				    		 {{else}} 	
+				    		<a href="#" id="editPost">
+				    			Edit</a>
+				    		 {{/if}}
+				    		 <a href="#" id="Delete"><small>Delete</small></a>
+				    		 <p>{{statusText}}</p>
+				    		
+				    	<a class="likebtn" href="#" id="like"><small>Like</small></a>
+			    		<a class="likebtn" href="#" id="unlike" hidden="true"><small>Unlike</small></a>
+			    		
+			    		
+				    	<div class="media">
+				    		<h4 class="media-heading">
+				    		  <p class="text-info"><small>
+				    		  {{#if length}}
+				    						{{likelength}}
+				    				<a href="{{pathFor 'pullup'}}" data-toggle="tooltip" data-placement="bottom" 
+   														id="tool"	title="{{#each like}}
+				    					{{from}}
+				    				{{/each}}">people
+  																			
+									</a>.
+									like this
+				    			{{/if}}
+				    			
+				    		 </small> </p>
+				    		</h4>
+				    		 <ul class="post-comment">{{>postComment}}</ul> 	    	
+				    	</div>
+			  		</div>
+				</div>
+			</div>
+			
+		</div>
+		
+			{{/each}}
+		</li>
+		</ul>
+			
+	</div>
+
+
+	<div class="col-md-3" id="front-page-right-col">
+	            {{>rightColumn}}
+	</div>
+</div>
+
+
+	
+</template>

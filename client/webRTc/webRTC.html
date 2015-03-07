@@ -1,0 +1,34 @@
+<template name="webRtc">
+<div class="container">
+<div class="row">
+	<div class="col-lg-4">
+		<video id="myStream" style="height:100px;width:100px" autoplay>
+		</video>
+	</div>
+
+	<div class="col-lg-8">
+		<video id="hisStream" style="height:300px;width:100%">
+		</video>
+	</div>
+	<div class="row">
+
+		<div class="col-lg-6">
+			<textarea id="sessionDescriptionMine"> 
+
+			</textarea>
+			<button class ="btn btn-primary" id="myDesc">
+				mine
+			</button>
+		</div>
+		<div class="col-lg-6">
+			<textarea id="sessionDescription"> 
+
+			</textarea>
+			<button class ="btn btn-primary" id="answer">
+				Answer
+			</button>
+		</div>
+	</div>
+</div>
+</div>
+</template>

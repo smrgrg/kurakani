@@ -1,0 +1,77 @@
+<template name="postItem">
+	<li>
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<div class="media">
+			  		<a class="pull-left" href="#">
+			    	<img class="media-object img-rounded" src="images/user.png" width="50px" alt="...">
+			  		</a>
+			  	
+			  		<div class="media-body">
+			  			<span class="h4 text-capitalize"><a href="#">{{author}} </a> </span>
+			  			<span>{{statusText}}</span>
+			    		<span class="media-heading"><span class="text-muted"><!-- {{pathFor 'profile'}} -->{{duration}}</span></span>{{#if ownPost}}
+			    		{{#if editing}}
+			    			 <div class="form-group">
+								<form id="editForm">
+			    			<input type="text" id="editPosts" value="{{statusText}}" />
+			    			<button type="btn btn-primary sm" id="EditPost">Edit</button>
+			    			</form>
+			    			</div>
+			    					
+			    		{{else}}
+			    		<a href="#" id="editPost"><small>
+			    		Edit</small></a>
+			    		{{/if}}
+			    		<a href="#" id="Delete"><small>Delete</small></a>
+			    	{{/if}}<br>
+			    		<a class="likebtn" href="#" id="like"><small>Like</small></a>
+			    		<!-- <a class="likebtn" href="#" id="unlike" hidden="true"><small>Unlike</small></a> -->
+			    		
+			    		
+				    	<div class="media">
+
+				    		<!-- {{#if like}}
+				    		<span class="badge badge-success">{{likeCount}}</span> People Like This
+				    		{{/if}}
+ -->
+				    		<h4 class="media-heading">
+				    		  <p class="text-info"><small><!-- {{#if length}} -->
+				    						<!-- {{likelength}} -->
+				    						{{like }}
+				    							
+				    				<!-- <a href="{{pathFor 'pullup'}}" data-toggle="tooltip" data-placement="bottom" 
+   														id="tool"	title=""> -->people
+  																			
+									<!-- </a>. -->
+									like this
+				    					<!-- {{/if}} -->
+				    						
+				    			
+				    		 </small> </p>
+				    		</h4>
+				    		 <ul class="post-comment">{{>postComment}}</ul> 	    	
+				    	</div>
+			  		</div>
+				</div>
+			</div>
+		</div>
+	</li>
+</template>
+
+<!-- <template name="pullup">
+	<div class="list-group" id="list" style="margin-top:80px;width:300px">
+  <a href="#" class="list-group-item active">
+   	People who Like This
+  </a>
+  	{{#each value}}
+  		
+  		 {{#each like}} 
+  		
+  <a href="{{pathFor 'profile'}}" class="list-group-item">{{from}}
+  </a>
+  		{{/each}}
+  	{{/each}}
+  
+</div>
+</template> -->

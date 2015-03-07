@@ -1,0 +1,74 @@
+<template name="dashboard">
+	<div class="margintop" >
+		<div class="col-md-3" id="profile-pics-col">
+			{{>leftColumn}}
+		</div>
+		<div class="col-md-6" id="second-col-status-updates">
+			{{>middleColumn}}
+		</div>
+		<div class="col-md-3" id="front-page-right-col">
+            {{>rightColumn}}
+		</div>
+
+	</div>
+	
+	
+</template>
+
+<template name="onlineUsers">
+	<div id="online-users">
+        <table class="table table-hover">
+            <tbody>
+                {{#each online}}
+                <tr><td><span id="personal-user">{{profile.username}}<button id="Chat" style="padding-right: 20px;" class="btn btn-primary pull-right btn-xs"> <i class="glyphicon glyphicon-envelope"></i> Chat</button>&nbsp;&nbsp;<button class="btn btn-danger pull-right btn-xs" id="Video"><i class="glyphicon glyphicon-facetime-video"></i> Video</button></span></td></tr>
+                {{/each}}
+                
+            </tbody>
+        </table>
+	</div>
+</template>
+
+<template name="chatRooms">
+
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#tab1" data-toggle="tab">Online Friends</a></li>
+            <li><a href="#tab2" data-toggle="tab">Chatrooms</a></li>
+        </ul>
+        <!--tab sections-->
+        <div class="tab-content">
+            <div class="tab-pane active" id="tab1">
+                {{>onlineUsers}}
+            </div>
+            <div class="tab-pane" id="tab2">
+                <div id="chatrooms">
+                    <table class="table table-striped" style="list-style:none;">
+                <tbody>  
+
+                <tr><td><a href="#" id="Science"><li> Science</li></a></td></tr>
+                <tr><td><a href="#" id="Politics"><li> Politics</li></a></td></tr>
+                <tr><td><a href="#" id="Love"><li> Love</li></a></td></tr>
+                </tbody>
+            </table>
+                </div>
+            
+            </div>
+        </div>
+
+
+
+</template>
+
+<template name="peopleYouMayKnow">
+    <div class="panel panel-primary" id="people-you-may-know">
+        <div class="panel-heading"><strong>People you may know</strong></div>
+        <div class="panel-body">
+            <ul class="dashboard-right">
+                <li><img src="/images/sameer.jpeg" width="50px" class="img-rounded"> Jeevan <button class="btn btn-default pull-right">Add friend</button></li>
+                <li><img src="/images/bbc.png" width="50px" class="img-rounded"> BBC <button class="btn btn-default pull-right">Add friend</button></li>
+                <li><img src="/images/xyz.jpeg" width="50px" class="img-rounded"> Kashyap <button class="btn btn-default pull-right">Add friend</button></li>
+
+            </ul>
+        </div>
+    </div>
+</template>
+

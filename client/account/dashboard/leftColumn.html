@@ -1,0 +1,17 @@
+<template name="leftColumn">
+	<div class="panel panel-primary">
+				<div class="panel-body">
+                        
+                    <!-- <input  multiple class="file fileinput" id="fileInput" type="file"/> -->
+                    
+                         
+                    <img class="img-responsive img-rounded" src="images/user.png"/>
+
+                    <input type="file" id="fileInput" style="display: none;" />
+                    
+                    
+                    <h3><strong>{{currentUser.profile.username}}</strong></h3>
+                    <small>Update Your Picture</small> &nbsp;<input type="button" value="Add photo" onclick="document.getElementById('fileInput').click();" />
+				</div>
+			</div>
+</template>

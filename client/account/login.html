@@ -1,0 +1,29 @@
+<template name="login">
+    <div class="col-lg-offset-4 col-lg-4 login">
+        <div class="well">
+            <h4 class="text-center text-info">
+                Login For Kurakani
+            </h4>
+            <form class="" id="loginForm">
+                <div class="form-group">
+                    <label class="control-label" for="userEmail">Email</label>
+                    <input class="form-control" id="userEmail" type="email">
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="userPassword">Password</label>
+                    <input class="form-control"  id="userPassword" type="password">
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-block  btn-primary"> Login</button>
+                </div>
+                <div class="form-group">
+                    <span class="text-danger" id="logError"></span>
+                </div>
+            </form>
+            <div>
+                <span>Not Yet Registered <a class="btn-link text-info" href="/signup"> Signup</a> </span>
+            </div>
+
+        </div>
+    </div>
+</template>

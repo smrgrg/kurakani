@@ -1,0 +1,35 @@
+<template name="loggedIn">
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle notification" data-toggle="dropdown"><span class="glyphicon glyphicon-envelope"></span> Private chat <span class="badge" id="messagecounter">
+        {{messagecounter}}
+        </span></a>
+          <ul class="dropdown-menu">
+                {{#each messagenotification}}
+                 <p>  <a href="#" id="name">{{sendername}} </a>wants to private chat with you..<br>
+                  <a href="" onclick="window.open('{{url}}', 'newwindow');"> <button type="button" class="btn btn-primary btn-sm acceptBtn" id="messageaccept">Accept</button></a>
+                   <button type="button" class="btn btn-primary btn-sm" id="messagereject">Reject</button></p>
+              {{/each}}
+            </ul>
+          </li>
+
+
+	<li class="dropdown">
+        <a href="#" class="dropdown-toggle notification" data-toggle="dropdown"><span class="glyphicon glyphicon-facetime-video "></span> Video call <span class="badge" id="counter">
+        {{counter}}
+        </span></a>
+          <ul class="dropdown-menu">
+                {{#each notification}}
+                 <p>  <a href="#" id="name"> {{callername}} </a>wants to video chat with you..<br>
+                  <a href="" onclick="window.open('{{url}}', 'newwindow', 'width=800, height=600');"> <button type="button" class="btn btn-primary btn-sm acceptBtn" id="accept">Accept</button></a>
+                   <button type="button" class="btn btn-primary btn-sm" id="reject">Reject</button></p>
+              {{/each}}
+            </ul>
+          </li>
+  <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> {{currentUser.profile.username}}&nbsp;<b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="#" id="logout">Logout</a></li>
+              
+          </ul>
+  </li>
+</template>
